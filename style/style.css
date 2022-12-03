@@ -15,54 +15,69 @@ body.toggled > #title {
     color: rgb(246, 244, 238);
     font-family: "Chivo", sans-serif;
     font-size: 4vw;
-    margin: 0px;
     pointer-events: none;
     transition: opacity 1200ms ease;
     width: 50vw;
     z-index: 3;
-    text-align: center 
-}
-
-.centered {
+    text-align: center;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.back{
-    z-index: 1;
+
+#tiles{
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(vars(--rows), 1fr);
 }
 
-.front{
-    z-index: 3;
+.tile{
+    cursor: pointer;
+    position: relative;
+    /*outline: 1px solid white;*/
 }
+
+.tile:hover:before {
+    background-color: rgb(30, 30, 30);
+}
+.tile:before {
+    background-color: rgb(15, 15, 15);
+    content: "";
+    inset: 0px;
+    position: absolute;
+}
+
+#page{
+    position:absolute;
+    justify-content: center;
+    display: inline;
+    text-align: center;
+    width: 100%;
+} 
 
 #name{
-    left: 50%;
     font-size: 3vw;
-    margin: 0px;
     font-family: "Montserrat", sans-serif;
-    position: absolute;
-    top: 10%;
-    transform: translate(-50%, -50%);
     color: rgb(15, 15, 15);
 }
 
-#pineapple{
-    /*object-fit: cover;*/
+#projects > a{
+    font-family: "Helvetica", sans-serif;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
-#links{
-    height: 80px;
-    width: 160px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-a{
+#links > a{
     font-family: "Helvetica", sans-serif;
     font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 a:link {
@@ -83,36 +98,4 @@ a:hover {
 a:active {
     text-decoration: none; 
     color: rgb(205, 253, 255);
-}
-
-#tiles{
-    height: 100vh;
-    width: 100vw;
-    z-index: 2;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(var(--columns), 1fr);
-    grid-template-rows: repeat(vars(--rows), 1fr);
-}
-table{
-    left: 50%;
-    position: absolute;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    border-spacing:105px;
-}
-.tile{
-    cursor: pointer;
-    position: relative;
-    /*outline: 1px solid white;*/
-}
-
-.tile:hover:before {
-    background-color: rgb(30, 30, 30);
-}
-.tile:before {
-    background-color: rgb(15, 15, 15);
-    content: "";
-    inset: 0px;
-    position: absolute;
 }

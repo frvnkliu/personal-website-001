@@ -67,13 +67,13 @@ body.toggled > #title {
     color: rgb(15, 15, 15);
 }
 
-#projects > a{
+.links > a{
     font-family: "Helvetica", sans-serif;
     margin-left: 3vw;
     margin-right: 3vw;
 }
 
-#links > a{
+#subheader > a{
     font-family: "Helvetica", sans-serif;
     font-size: 2vw;
     margin-left: 3vw;

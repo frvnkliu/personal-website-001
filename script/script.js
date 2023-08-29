@@ -45,5 +45,13 @@ const createGrid = () => {
     createTiles(columns*rows);
 }
 
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+}
+
 createGrid();
 window.onresize = () => createGrid();

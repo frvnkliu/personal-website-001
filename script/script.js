@@ -6,6 +6,7 @@ const handleOnClick = index =>{
     if(!toggled){
         toggled = true;
         document.body.classList.toggle("toggled");
+        document.body.style.overflow = "visible";
         const tileanim = anime({
             targets: ".tile",
             opacity: toggled? 0:1,

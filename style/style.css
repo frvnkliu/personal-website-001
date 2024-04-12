@@ -75,6 +75,11 @@ h2{
     margin-left:  3vw;
 }
 
+.links > p{
+    font-family: "Helvetica", sans-serif;
+    margin-left: 5vw;
+    font-style: italic;
+}
 
 .links .dropdown-content {
     display: none;
@@ -128,6 +133,7 @@ h2{
 #subheader > a{
     font-family: "Helvetica", sans-serif;
     margin-left: 3vw;
+    font-size: 1.2vw;
 }
 
 a:link {

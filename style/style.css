@@ -75,12 +75,6 @@ h2{
     margin-left:  3vw;
 }
 
-.links > p{
-    font-family: "Helvetica", sans-serif;
-    margin-left: 5vw;
-    font-style: italic;
-}
-
 .links .dropdown-content {
     display: none;
 }
@@ -124,6 +118,26 @@ h2{
     font-family: "Helvetica", sans-serif;
     margin-left: 3vw;
     margin-right: 3vw;
+    font-size:  20px;
+}
+
+.links > p{
+    font-family: "Helvetica", sans-serif;
+    margin-left: 5vw;
+    font-style: italic;
+}
+
+.links > p > a{
+    display:  block;
+    margin-top: 1vh;
+    font-style: normal;
+    font-size:  16px;
+    text-decoration: underline;
+}
+
+.links > p > strong{
+    margin-top: 1vh;
+    font-style: normal;
 }
 
 #subheader{
@@ -152,6 +166,27 @@ a:hover {
 }
 
 a:active {
+    text-decoration: none; 
+    color: rgb(205, 253, 255);
+}
+
+
+.links .dropdown-content a:link {
+    text-decoration: none; 
+    color: rgb(15, 15, 15);
+}
+
+.links .dropdown-content a:visited {
+    text-decoration: none; 
+    color: rgb(30, 30, 30);
+}
+
+.links .dropdown-content a:hover {
+    text-decoration: none; 
+    color: rgb(100,100,100);
+}
+
+.links .dropdown-content a:active {
     text-decoration: none; 
     color: rgb(205, 253, 255);
 }

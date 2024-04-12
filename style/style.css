@@ -61,23 +61,73 @@ body.toggled > #title {
     width: 100%;
 } 
 
-#name{
+#name{    
+    text-align:  left;
+    margin-left: 3vw;
     font-size: 3vw;
     font-family: "Montserrat", sans-serif;
     color: rgb(15, 15, 15);
 }
 
-.links > a{
+
+h2{
+    text-align: left;
+    margin-left:  3vw;
+}
+
+
+.links .dropdown-content {
+    display: none;
+}
+
+.links .dropdown-content a {
+    display: block;
+    margin-bottom:  20px;
+    margin-left: 4vw;
+    text-decoration: none;
+    color: #333;
+}
+
+.links .dropdown-toggle {
+    cursor: pointer;
+    color: #333;
+    margin-bottom: 20px;
+    display: block; /* Make each toggle appear on a new line */
+}
+
+.links .dropdown-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent; /* Adjust thickness as needed */
+    border-right: 4px solid transparent; /* Adjust thickness as needed */
+    border-top: 4px solid #333; /* Adjust color as needed */
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.links .dropdown-toggle.open::after {
+    transform: rotate(180deg);
+}
+
+.links{
+    text-align: left;
+}
+
+.links a{
     font-family: "Helvetica", sans-serif;
     margin-left: 3vw;
     margin-right: 3vw;
 }
 
+#subheader{
+    text-align: left;
+}
+
 #subheader > a{
     font-family: "Helvetica", sans-serif;
-    font-size: 2vw;
     margin-left: 3vw;
-    margin-right: 3vw;
 }
 
 a:link {

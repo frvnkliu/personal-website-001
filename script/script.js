@@ -55,3 +55,21 @@ if (history.scrollRestoration) {
 
 createGrid();
 window.onresize = () => createGrid();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var toggles = document.querySelectorAll('.dropdown-toggle');
+    toggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            event.preventDefault(); // Prevent default anchor link behavior
+
+            var content = this.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                this.classList.remove('open');
+            } else {
+                content.style.display = 'block';
+                this.classList.add('open');
+            }
+        });
+    });
+});

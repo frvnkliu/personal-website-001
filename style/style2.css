@@ -1,0 +1,94 @@
+body {
+    background-color: #f6f4ee; /* Light gray background */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font family */
+    font-size: 16px; /* Default font size */
+}
+
+body.toggled > #title {
+    opacity: 0;
+}
+  
+#tiles{
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(vars(--rows), 1fr);
+}
+
+.tile{
+    cursor: pointer;
+    position: relative;
+    /*outline: 1px solid white;*/
+}
+
+.tile:hover:before {
+    background-color: rgb(30, 30, 30);
+}
+.tile:before {
+    background-color: rgb(15, 15, 15);
+    content: "";
+    inset: 0px;
+    position: absolute;
+}
+
+
+#title {
+    color: #f6f4ee; /* White color for the title */
+    font-family: 'Chivo', sans-serif; /* Font for the title */
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 20vh; /* Adjust as needed */
+    transition: opacity 0.6s ease;
+    opacity: 0;
+}
+
+#page {
+    text-align: left; /* Align the content to the left */
+    margin-top: 10vh; /* Adjust as needed */
+}
+
+h2 {
+    margin-left: 10px;
+    text-align: left; /* Align h2 headers to the left */
+    color: #222; /* Dark gray color for h2 headers */
+}
+
+#name {
+    font-size: 3vw;
+    font-family: 'Montserrat', sans-serif; /* Font for the name */
+    color: #222; /* Dark gray color for the name */
+    margin-bottom: 20px; /* Add space below the name */
+}
+
+.links a {
+    font-size: 1.2vw; /* Adjust the font size of links */
+    color: #222; /* Dark gray color for links */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 20px; /* Adjust spacing between links */
+    display: block; /* Display links as block elements */
+    margin-bottom: 2px; /* Add space below each link */
+}
+
+.links a:hover {
+    color: #666; /* Light gray color for links on hover */
+}
+
+#subheader {
+    margin-bottom: 5px; /* Add space below the subheader */
+}
+
+#subheader a {
+    font-size: 1.2vw; /* Adjust the font size of subheader links */
+    color: #222; /* Dark gray color for subheader links */
+    text-decoration: none; /* Remove underline from subheader links */
+    margin-left: 20px; /* Adjust spacing between subheader links */
+    margin-bottom: 10px; /* Add space below each subheader link */
+}
+
+#subheader a:hover {
+    color: #666; /* Light gray color for subheader links on hover */
+}
